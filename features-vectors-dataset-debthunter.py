@@ -5,8 +5,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 INPUT_FILE = './datasets/debthunter-dataset.csv'
-OUTPUT_FILE_BINARY = 'output/debthunter-dataset-features-vectors-binary-classification.csv'
-OUTPUT_FILE_MULTICLASS = 'output/debthunter-dataset-features-vectors-multiclass-classification.csv'
+OUTPUT_FILE_BINARY = 'features-matrices/debthunter-dataset-features-matrices-binary-classification.csv'
+OUTPUT_FILE_MULTICLASS = 'features-matrices/debthunter-dataset-features-matrices-multiclass-classification.csv'
 
 comments = []
 classifications = []
