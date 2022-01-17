@@ -16,8 +16,8 @@ stop_words = set(stopwords.words('english'))
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 INPUT_FILE = './datasets/maldonado-dataset.csv'
-OUTPUT_FILE_BINARY = 'output/maldonado-dataset-features-vectors-binary-classification.csv'
-OUTPUT_FILE_MULTICLASS = 'output/maldonado-dataset-features-vectors-multiclass-classification.csv'
+OUTPUT_FILE_BINARY = 'features-matrices/maldonado-dataset-features-matrices-binary-classification.csv'
+OUTPUT_FILE_MULTICLASS = 'features-matrices/maldonado-dataset-features-matrices-multiclass-classification.csv'
 
 def clean_term(text):
     text = text.lower()
