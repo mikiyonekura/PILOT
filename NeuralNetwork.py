@@ -58,7 +58,8 @@ class Network(object):
             random.shuffle(training_data)
             mini_batches = [
                 training_data[k:k+mini_batch_size]
-                for k in xrange(0, n, mini_batch_size)]
+                for k in range(0, n, mini_batch_size)]
+                # for k in xrange(0, n, mini_batch_size)]
             for mini_batch in mini_batches:
                 self.refine(mini_batch, learning_rate)
             
@@ -105,7 +106,8 @@ class Network(object):
         synapse_b[-1] = error
         synapse_w[-1] = np.dot(error, activations[-2].transpose())
 
-        for l in xrange(2, self.num_layers):
+        # for l in xrange(2, self.num_layers):
+        for l in range(2, self.num_layers):
             z = zs[-l]
             sp = sigmoid_derivative(z)
             error = np.dot(self.weights[-l+1].transpose(), error) * sp
