@@ -17,6 +17,8 @@ def run(path, network_layers, num_of_epochs, learning_rate, expected_accuracy):
     num_of_testing_items = len(test_data)
     time1 = datetime.datetime.now()
     net = network.Network(path,expected_accuracy,network_layers)
+
+    print("Training data is ", training_data)
     y_pred = net.SGD(training_data, num_of_epochs, 10, learning_rate, test_data=test_data)
     y_pred = np.reshape(y_pred, (num_of_testing_items,num_of_categories))
 

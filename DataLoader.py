@@ -19,7 +19,14 @@ def load_data(path, num_of_inputs, num_of_categories):
 
 
     training_labels = [vectorization(y,num_of_categories) for y in tr_l]
-    training_data = zip(training_inputs, training_labels)
+
+    # == Changed ==
+    training_inputs = list(training_inputs)
+    training_labels = list(training_labels)
+
+    training_data = list(zip(training_inputs, training_labels))
+
+    # training_data = zip(training_inputs, training_labels)
 
 
     """==============read testing data=============="""
